@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --azure-mist: #F3FEFE;
+    --coffee-bean: #6D4B38;
+    --cinnamon: #AB653E;
+    --tan: #E6C08B;
+    --pale-sky: #CED9E1;
+    --ink: #2A1E18;
+    --paper: #F5F0E6;
+    --garden-sky: #86B3C3;
+    --leaf: #2F5D3A;
+    --leaf-soft: #8DB580;
+    --stamp-coral: #E58F78;
+    --stamp-ink: #3B4F8F;
+    --cinnamon-text: #9A5532;
+
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-script: 'Yellowtail', cursive;
+    --font-hand: 'Caveat', cursive;
+    --font-body: 'Newsreader', Georgia, serif;
+    --font-ui: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    background-color: var(--azure-mist);
+    color: var(--ink);
+    font-family: var(--font-ui);
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-ui {
+  font-family: var(--font-ui);
+}
+
+/* Texture and effects */
+.paper-texture {
+  background-color: var(--paper);
+  background-image: radial-gradient(rgba(42, 30, 24, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Washi tape & stamp transforms */
+.washi-tape {
+  background: rgba(230, 192, 139, 0.85);
+  box-shadow: 0 1px 3px rgba(42, 30, 24, 0.12);
+  clip-path: polygon(2% 0%, 98% 0%, 100% 50%, 98% 100%, 2% 100%, 0% 50%);
+}
+
+/* Smooth focus rings */
+*:focus-visible {
+  outline: 2px solid var(--cinnamon);
+  outline-offset: 3px;
+}
+
+[data-theme="dark"] *:focus-visible {
+  outline-color: var(--tan);
+}
+
+/* Utility for text inversion over photo collage */
+.hero-photo-invert-mask {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ──────────────────────────────────────────────────────────── */
+/* BUTTON DESIGN SYSTEM (§ Universal Tactile Button Token)     */
+/* Bold black border + distinct bottom-right offset shadow     */
+/* ──────────────────────────────────────────────────────────── */
+.btn-tactile {
+  border: 2px solid #2A1E18;
+  box-shadow: 3.5px 3.5px 0px #2A1E18;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-tactile:hover {
+  transform: translate(1.5px, 1.5px);
+  box-shadow: 1.5px 1.5px 0px #2A1E18;
+}
+
+.btn-tactile:active {
+  transform: translate(3.5px, 3.5px);
+  box-shadow: 0px 0px 0px #2A1E18;
+}
+
+.btn-tactile-sm {
+  border: 2px solid #2A1E18;
+  box-shadow: 2.5px 2.5px 0px #2A1E18;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-tactile-sm:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #2A1E18;
+}
+
+.btn-tactile-sm:active {
+  transform: translate(2.5px, 2.5px);
+  box-shadow: 0px 0px 0px #2A1E18;
+}
+
+.btn-tactile-lg {
+  border: 2px solid #2A1E18;
+  box-shadow: 4px 4px 0px #2A1E18;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-tactile-lg:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1.5px 1.5px 0px #2A1E18;
+}
+
+.btn-tactile-lg:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #2A1E18;
+}
+
+.btn-tactile-pill {
+  border: 2px solid #2A1E18;
+  box-shadow: 2.5px 2.5px 0px #2A1E18;
+  border-radius: 9999px;
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-tactile-pill:hover {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #2A1E18;
+}
+
+.btn-tactile-pill:active {
+  transform: translate(2.5px, 2.5px);
+  box-shadow: 0px 0px 0px #2A1E18;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "Birds & Bees Cafeto",
+  "description": "Awwwards-grade botanical garden cafe website for Birds & Bees Cafeto in Indore — 100% pure vegetarian, handcrafted, tactile and cinematic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
