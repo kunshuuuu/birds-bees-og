@@ -2,6 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "vite",
   "outputDirectory": "dist",
+  "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "vite build",
   "rewrites": [
     {
       "source": "/(.*)",
